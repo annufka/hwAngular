@@ -1,0 +1,39 @@
+<app-header xmlns="http://www.w3.org/1999/html"></app-header>
+<div class="container">
+  <h1 style="margin: 15px; text-align: center;">Изменить профайл</h1>
+  <div>
+    <div class="col-6 d-inline-block">
+      <form [formGroup]="formProfile" (ngSubmit)="patch()">
+        <div class="form-group">
+          <label>Телефон</label>
+          <input class="form-control" type="text" formControlName="phone">
+        </div>
+        <div class="form-group">
+          <label>Адрес</label>
+          <input class="form-control" type="text" formControlName="address">
+        </div>
+        <div class="form-group">
+          <label>Псевдоним</label>
+          <input class="form-control" type="text" formControlName="pseudonym">
+        </div>
+        <div class="form-group">
+          <label>Skype</label>
+          <input class="form-control " type="text" formControlName="skype">
+        </div>
+        <div class="text-center">
+          <button class="btn vd_bg-green vd_white width-100" type="submit">Обновить информацию профиля</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="col-5 d-inline-block text-center">
+      <div class="image">
+        <img *ngIf="profile" src="{{baseurl}}{{profile.photo}}" alt="" width="200px">
+        <input type="file" #Image accept="image/*" (change)="handleFileInput($event.target)">
+      </div>
+      <br>
+      <button (click)="update()" class="btn vd_bg-green vd_white width-100">Обновить фото</button>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

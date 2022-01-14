@@ -1,0 +1,25 @@
+<app-header></app-header>
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Id</th>
+    <th scope="col">Name</th>
+    <th scope="col">Price</th>
+    <th scope="col">Count</th>
+    <th scope="col">Summ</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of products, let index = index">
+    <th scope="row">{{index+1}}</th>
+    <td>{{item.id}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.price}}</td>
+    <td>{{item.count}}</td>
+    <td>{{item.count*item.price}}</td>
+  </tr>
+  </tbody>
+</table>
+<h4>Сумма {{summ}}</h4>
+<app-footer></app-footer>

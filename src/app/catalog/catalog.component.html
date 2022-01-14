@@ -1,0 +1,26 @@
+<app-header></app-header>
+<div class="container">
+  <h1 style="margin: 15px; text-align: center;">Каталог</h1>
+  <mat-form-field appearance="fill">
+    <mat-label>Категория</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let category of categories" [value]="category.name" (click)="setCategory(category.id)">
+        {{category.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <div class="card-deck" style="display: flex; justify-content: space-between;">
+    <div *ngFor="let product of products" style="margin-bottom: 15px; text-align: center">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" height="200px" src={{product.img}} alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">{{product.name}}</p>
+          <p class="card-text">{{product.price}}</p>
+          <p class="card-text">id - {{product.id}}</p>
+          <button class="btn btn-success" (click)="addCart(product)" >Купить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

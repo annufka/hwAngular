@@ -1,0 +1,22 @@
+<app-header></app-header>
+<div class="container">
+  <h1 style="margin: 15px; text-align: center;">Регистрация</h1>
+  <form [formGroup]="formRegistration" (ngSubmit)="registration()">
+    <div class="form-group">
+      <label>Логин</label>
+      <input class="form-control col-2" type="text" formControlName="login">
+    </div>
+    <div class="form-group">
+      <label>Email</label>
+      <input class="form-control col-2" type="email" formControlName="email">
+    </div>
+    <div class="form-group">
+      <label>Пароль</label>
+      <input class="form-control col-2" type="password" formControlName="password">
+    </div>
+    <div class="col-2 text-center mgbt-xs-5">
+      <button class="btn vd_bg-green vd_white width-100" type="submit">Регистрация</button>
+    </div>
+  </form>
+</div>
+<app-footer></app-footer>

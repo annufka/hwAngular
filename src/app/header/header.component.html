@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+  <a class="navbar-brand" routerLink="">Logo</a>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="">Главная</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/catalog">Каталог</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/cart">Корзина</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/profile">Изменить свой профайл</a>
+      </li>
+    </ul>
+    <div class="btn-group">
+      <a routerLink="/registration" class="btn btn-outline-success" type="button">Регистрация</a>
+      <a routerLink="/login" class="btn btn-outline-success" type="button">Вход</a>
+      <a (click)="logOut()" class="btn btn-outline-success" type="button">Log out</a>
+    </div>
+  </div>
+  </div>
+</nav>
